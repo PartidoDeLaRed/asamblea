@@ -41,6 +41,9 @@
           a(href=proposal.authorUrl, target='_blank')=proposal.author
         - else
           =proposal.author
+    - else if (proposal.creator)
+      h2.author=t('admin-topics-form.label.author') + ': '
+        =proposal.creator.fullName
     h3=proposal.title
     .entry-content
       .body!=toHTML(proposal.clauses[0], { className: ['commentable-section'], iframeResponsive: true })

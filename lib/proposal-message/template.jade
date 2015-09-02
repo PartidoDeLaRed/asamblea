@@ -1,0 +1,14 @@
+#message
+  - if (topic.closed)
+    .well.well-lg(class=topic.closeMessage || user.staff ? '' : 'hide')
+      h4=t('proposal.final-message.title')
+        a.edit.btn.btn-link.pull-right(href='#', class=topic.closeMessage && user.staff ? '' : 'hide')=t('proposal.final-message.edit')
+      p.static(class=topic.closeMessage ? '' : 'hide')=topic.closeMessage
+      form.message-form(class=!topic.closeMessage && user.staff ? '' : 'hide', method='post', action='/api/topic/#{topic.id}/message', autovalidate='autovalidate', autosubmit='autosubmit')
+        p
+          =t('proposal.final-message.explanation')
+          textarea(name='message', rows=4, validate='required max-length:4096')
+        .actions.text-right
+          input.btn.btn-primary(type='submit', value=t('proposal.final-message.submit'))
+          a.btn.btn-link.cancel.hide=t('proposal.final-message.cancel')
+        ul.form-messages
