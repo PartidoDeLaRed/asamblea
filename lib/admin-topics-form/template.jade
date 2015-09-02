@@ -20,13 +20,13 @@
           select.form-control(name='tag', tabindex=2, validate='required')
             - each tag in tags
               option(selected= topic.tag ? tag.hash === topic.tag.hash : false, value=tag.hash)= tag.name
-        .form-group
+        .form-group(class=short ? 'hide' : '')
           label= t('admin-topics-form.label.topicId')
           input.form-control(type='text', id="topicId", name='topicId', tabindex=3, placeholder=t('admin-topics-form.label.topicId'), value=topic.topicId)
-        .form-group
+        .form-group(class=short ? 'hide' : '')
           label= t('admin-topics-form.label.author')
           input.form-control(type='text', id="topicAuthor", name='topicAuthor', tabindex=4, placeholder='John Doe', value=topic.author, validate='author')
-        .form-group
+        .form-group(class=short ? 'hide' : '')
           label= t('admin-topics-form.label.author') + ' URL'
           input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=5, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=topic.authorUrl, validate='url')
         .form-group
@@ -35,7 +35,7 @@
         .form-group.hide
           label= t('admin-topics-form.label.clause-truncation-text')
           input.form-control(type='text', name='bodyTruncationText', placeholder=t('common.read-more'), value=topic.bodyTruncationText)
-        .form-group
+        .form-group(class=short ? 'hide' : '')
           label= t('admin-topics-form.label.source')
           input.form-control(type='url', name='source', tabindex=6, placeholder=t('admin-topics-form.placeholder.source'), value=topic.source, validate='url')
         .form-group
@@ -55,7 +55,7 @@
               i.glyphicon.glyphicon-remove
           .input-group
             input.form-control(name='closingAtTime', tabindex=11, value=closingAtTime, placeholder='hh:mm', validate='time')
-        .form-group
+        .form-group(class=short ? 'hide' : '')
           label=t('admin-topics-form.label.resources')
           .topic-links
             - if (topic.links && topic.links.length)
