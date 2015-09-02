@@ -41,7 +41,7 @@
           a(href=proposal.authorUrl, target='_blank')=proposal.author
         - else
           =proposal.author
-    - else
+    - else if (proposal.creator)
       h2.author=t('admin-topics-form.label.author') + ': '
         =proposal.creator.fullName
     h3=proposal.title
