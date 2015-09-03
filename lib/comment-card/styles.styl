@@ -1,6 +1,20 @@
 .comment-item
   max-width 580px
   padding 12px 10px 0px 10px
+  .tendency
+    border-radius 4px
+    margin-left 5px
+    font-size 12px
+    font-weight bold
+    text-transform uppercase
+    color #fff
+    padding 0px 10px
+    &.infavor
+      background-color #a4cb53
+    &.against
+      background-color #d95e59
+    &.neutral
+      background-color #666
   &.spam .spam-message
     display block !important
   &:hover
@@ -48,6 +62,9 @@
         display none
       .comment-edit-form
         display block
+      .tendency
+        &.tendency-top
+          display none
 
   .comment-body
     .spam-message

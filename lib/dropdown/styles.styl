@@ -1,0 +1,42 @@
+.btn-group
+    button
+      color white
+      &.infavor
+        background-color #a4cb53
+      &.neutral
+        background-color #666
+      &.against
+        background-color #d95e59
+    &.active
+      .dropdown-list
+        display block
+    &.hide
+      display none
+
+  .dropdown-list
+    display none
+    position absolute
+    z-index 10000
+    margin-top 2px
+    padding 5px 0
+    min-width 160px
+    width 100%
+    list-style none
+    border-radius 2px
+    border 1px solid rgba(#000,.15)
+    box-shadow 1px 1px 4px -1px rgba(#000, .175)
+    background-color #f9f9f9
+
+    .dropdown-item
+      a
+        white-space normal
+
+  .dropdown-button
+    width 150px
+    padding-right 20px
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+
+    .caret
+      right 6px

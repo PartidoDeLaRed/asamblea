@@ -1,18 +1,26 @@
 - var logged = user.logged()
 
 .comments
+  .inner-container.best-comments.well
+    h4=t('comments.best')
+    #best-container
+
   - if (logged)
     .inner-container.my-comments
       h4=t('comments.your.arguments')
       ul.media-list.my-comments-list
       form.comment-form(method='post', action='/api/topic/#{topic.id}/comment', autovalidate='autovalidate', autosubmit='autosubmit')
         h5= t('comments.your-argument')
+          a.pull-right(href='#').cancel-new-comment=t('common.cancel')
+          span.pull-right &nbsp;&nbsp;&nbsp;
           a.pull-right(href='/help/markdown', target='_blank') #{t('markdown.comments.formatting-help')}
         p
           textarea(name='text', rows='4', validate='required max-length:4096', tabindex=1)
           ul.form-messages
-        input.btn.form-submit.pull-right(type='submit', tabindex=2, value=t('comments.send'))
-        a(href='#', tabindex=3).btn.btn-link.cancel-new-comment.pull-right=t('common.cancel')
+        .btn-tendency
+          input#btn-infavor.btn.form-submit(type='submit', tabindex=2, value=t('comments.infavor'))
+          input#btn-neutral.btn.form-submit(type='submit', tabindex=3, value=t('comments.neutral'))
+          input#btn-against.btn.form-submit(type='submit', tabindex=4, value=t('comments.against'))
         ul.form-messages
       button.btn.btn-block.new-comment.hide
         i.icon-plus

@@ -1,6 +1,5 @@
 nav#sidebar
-  #action-buttons.text-center
-    button.btn.btn-primary.btn-block=t('sidebar.new')
-
+  .actions-container
+    button.btn.btn-primary.btn-block(data-add-topic)=t('sidebar.new')
   .filter-container(data-sidebar-filter)
   .list-container(data-sidebar-list)

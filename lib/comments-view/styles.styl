@@ -5,8 +5,13 @@ content_width = 580px
 -------------------------------------------------- */
 .comments
   background #f9f9f9
-  padding-top 50px
+  padding-top 1px
   padding-bottom 50px
+
+  .my-comments
+    .my-comments-list
+      li.comment-item
+        overflow visible
 
   .lock-spinner
       background-color #f9f9f9
@@ -16,6 +21,31 @@ content_width = 580px
     margin auto
     max-width content_width
     min-height 5em
+    margin-top 40px
+
+    .btn-tendency
+      #btn-infavor
+        width 30%
+        margin-right 5%
+        background-color #a4cb53
+        -webkit-transition all 0.3s ease
+        &:hover
+          background-color darken(#a4cb53, 40%)
+
+      #btn-neutral
+        width 30%
+        margin-right 5%
+        background-color #666
+        -webkit-transition all 0.3s ease
+        &:hover
+          background-color darken(#666, 40%)
+
+      #btn-against
+        width 30%
+        background-color #d95e59
+        -webkit-transition all 0.3s ease
+        &:hover
+          background-color darken(#d95e59, 40%)
 
     form.comment-form
       overflow hidden
@@ -44,5 +74,3 @@ content_width = 580px
         border-color #ccc
       .icon-plus
         margin-right 6px
-
-@import './comments'

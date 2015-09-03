@@ -1,0 +1,13 @@
+.dropdown.btn-group
+  button.btn.dropdown-button.dropdown-toggle(type='button', class='btn-' + (style || 'default'))
+    span.caption=caption
+    span.caret
+  ul.dropdown-list.dropdown-menu
+    - if (all)
+      li.dropdown-item(data-id=0)
+        a(href='#')=allText
+      li.divider(role='separator')
+
+    - each item in items
+      li.dropdown-item(data-id=item.id)
+        a(href='#')=item.text
