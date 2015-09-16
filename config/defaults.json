@@ -74,7 +74,8 @@
     "tweetText",
     "segmentKey",
     "spamLimit",
-    "availableLocales"
+    "availableLocales",
+    "minutasUrl"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -131,5 +132,6 @@
     "sv",
     "uk",
     "zh_TW"
-  ]
+  ],
+  "minutasUrl": ""
 }
