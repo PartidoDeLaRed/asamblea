@@ -18,6 +18,8 @@
     .user
     - var color = config.headerFontColor;
     - var style = color ? 'color: ' + color : '';
+    a(href='/comisiones', style=style).pull-left.login
+      span=t('commissions.title')
     a(href='/signin', style=style).login.pull-right.anonymous-user
       i.icon-signin
       span= t('header.signin')

@@ -354,5 +354,13 @@
   "validators.min-length.singular": "Debe tener al menos 1 caracter",
   "validators.not.match": "No coinciden",
   "validators.password.not.match": "Las contraseñas no coinciden",
-  "validators.required": "Requerido"
+  "validators.required": "Requerido",
+  "commissions.title": "Comisiones",
+  "commissions.communication": "Comunicación",
+  "commissions.organization": "Organización",
+  "commissions.platforms": "Plataformas",
+  "commissions.territory": "Territorio",
+  "commissions.financing": "Financiamiento",
+  "commissions.net-parties": "Partidos de la Red",
+  "commissions.affiliations": "Afiliaciones"
 }
