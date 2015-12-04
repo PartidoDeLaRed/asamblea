@@ -6,14 +6,14 @@
   "mongoUrl": "mongodb://localhost/DemocracyOS-dev",
   "mongoUsersUrl": "",
   "jwtSecret": "Generate a secret token and paste it here.",
-  "deploymentId": "",
-  "corsDomains": "",
+  "corsDomains": [],
   "signinUrl": "",
   "signupUrl": "",
   "settingsUrl": "",
   "staff": [],
   "allowEmailAliases": true,
   "facebookSignin": false,
+  "publicEmails": false,
   "auth": {
     "basic": {
       "username": "",
@@ -35,6 +35,8 @@
     "url": "",
     "token": "",
     "mailer": {
+      "name": "The DemocracyOS Team",
+      "email": "no-reply@democracyos.org",
       "service": "",
       "auth": {
         "user": "",
@@ -88,7 +90,7 @@
   },
   "logo": "/boot/logo.png",
   "logoMobile": "/boot/logo-mobile.png",
-  "favicon": " /boot/favicon.ico",
+  "favicon": "/boot/favicon.ico",
   "organizationName": "DemocracyOS on GitHub",
   "organizationEmail": "no-reply@democracyos.org",
   "organizationUrl": "https://github.com/DemocracyOS/app",
@@ -110,7 +112,6 @@
   "visibility": "visible",
   "usersWhitelist": false,
   "multiForum": false,
-  "feedsLimit": 10,
   "tweetText": "",
   "forceSafeImageURLs": true,
   "segmentKey": "",
@@ -127,11 +128,13 @@
     "nl",
     "pl",
     "pt",
+    "ro",
     "ru",
     "sq",
     "sv",
     "uk",
     "zh_TW"
   ],
-  "minutasUrl": ""
+  "minutasUrl": "",
+  "enforceLocale": false
 }

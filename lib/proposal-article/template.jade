@@ -46,18 +46,12 @@
         =proposal.creator.fullName
     h3=proposal.title
     .entry-content
-      .body!=toHTML(proposal.clauses[0], { className: ['commentable-section'], iframeResponsive: true })
       .clauses
-        - var clauses = proposal.clauses.slice(1)
-        - if (clauses.length)
-          - each clause, i in clauses
-            - var classes = ['hide', 'clause']
-            - classes.push(clause.empty ? '' : 'commentable-section')
-            !=toHTML(clause, { className: classes, iframeResponsive: true })
-      - if (proposal.bodyTruncationText)
-        a.read-more(href="#")= proposal.bodyTruncationText
-      - else
-        a.read-more(href="#")= t('common.read-more')
+        - var clauses = proposal.clauses
+        each clause, i in clauses
+          - var classes = ['clause']
+          - classes.push(clause.empty ? 'hide' : 'commentable-section')
+          !=toHTML(clause, { className: classes, iframeResponsive: true })
 
     //- Article source
     - if (proposal.source)
@@ -85,4 +79,3 @@
     .share-links
       a(target="_blank", href="http://www.facebook.com/sharer.php?u=#{baseUrl}/topic/#{proposal.id}").flaticon.social.facebook
       a(target="_blank", href="http://twitter.com/share?text=#{text}&url=#{baseUrl}/topic/#{proposal.id}").flaticon.social.twitter
-      a(target="_blank", href="https://plus.google.com/share?url=#{baseUrl}/topic/#{proposal.id}").flaticon.social.google-plus
